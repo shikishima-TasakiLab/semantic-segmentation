@@ -37,7 +37,7 @@ DOCKER_VOLUME="${DOCKER_VOLUME} -v $(dirname ${RUN_DIR}):/workspace/nvsemseg:rw"
 DOCKER_VOLUME="${DOCKER_VOLUME} -v ${XSOCK}:${XSOCK}:rw"
 DOCKER_VOLUME="${DOCKER_VOLUME} -v ${XAUTH}:${XAUTH}:rw"
 if [[ ${DATASET_DIR} != "" ]]; then
-  DOCKER_VOLUME="${DOCKER_VOLUME} -v ${DATASET_DIR}:/workspace/nvsemseg/datasets:rw"
+  DOCKER_VOLUME="${DOCKER_VOLUME} -v ${DATASET_DIR}:/workspace/nvsemseg/data:rw"
 fi
 
 DOCKER_ENV="${DOCKER_ENV} -e XAUTHORITY=${XAUTH}"
